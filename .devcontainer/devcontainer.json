@@ -15,5 +15,13 @@
 			"pnpmVersion": "9.15.2",
 			"nvmVersion": "0.40.1"
 		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"ms-dotnettools.csdevkit"
+			]
+		}
 	}
 }
