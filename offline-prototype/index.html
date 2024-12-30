@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .input {
+      font-family: "Goudy Bookletter 1911", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 3em;
+      outline: none;
+      white-space: pre;
+    }
+
+    #container {
+      padding: 10%;
+    }
+  </style>
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      var firstInput = document.getElementsByClassName("input")[0];
+
+      var range = document.createRange();
+      var sel = window.getSelection();
+
+      range.setStart(firstInput, 1);
+      range.collapse(true);
+
+      sel.removeAllRanges();
+      sel.addRange(range);
+    });
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div id="container">
+    <div class="input" contenteditable="true">Once upon a time...</div>
+  </div>
+</body>
